@@ -13,7 +13,7 @@ public class MainTest {
 	
 	WebDriver driver;
 	String url = "https://www.google.co.uk";
-	final String filePath = "C:\\Testing/chromedriver.exe";
+	final String filePath = "C://Testing/chromedriver.exe";
 	final String driverType = "webdriver.chrome.driver";
 	
 	@Before
@@ -29,9 +29,9 @@ public class MainTest {
 	@Test
 	public void methodTest() {
 		
-		driver.findElement(By.id("lst-ib")).click();
-		driver.findElement(By.id("lst-ib")).sendKeys("hello world");
-	    driver.findElement(By.id("lst-ib")).sendKeys(Keys.ENTER);
+		driver.findElement(By.name("q")).click();
+		driver.findElement(By.name("q")).sendKeys("hello world");
+	    driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
 		assertTrue(true);
 		
 	}
